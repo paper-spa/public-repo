@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - run: echo hello > world.txt
-      - run: echo {{ github.run_id }}
+      - run: echo ${{ github.run_id }}
       - uses: actions/upload-artifact@v2
         with:
           path: world.txt
