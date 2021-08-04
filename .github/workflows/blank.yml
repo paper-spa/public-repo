@@ -28,3 +28,6 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           path: world.txt
+      - uses: YiMysty/download-artifact@main
+        with:
+          name: my-artifact
