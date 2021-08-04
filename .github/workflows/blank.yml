@@ -30,5 +30,3 @@ jobs:
           path: world.txt
           name: my-artifact
       - uses: YiMysty/download-artifact@main
-        with:
-          name: my-artifact
