@@ -32,3 +32,4 @@ jobs:
       - uses: YiMysty/download2@main
         with:
           name: my-artifact
+      - run: printenv
