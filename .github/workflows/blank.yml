@@ -23,14 +23,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - run: printenv
-      - run: echo hello > world.txt
+      - run: echo hello > world2.txt
       - run: echo ${{ github.run_id }}
       - uses: actions/upload-artifact@v2
         with:
-          path: world.txt
-          name: my-artifact
-      - uses: YiMysty/download2@main
-        with:
+          path: world2.txt
           name: my-artifact
       - run: printenv
   deployment:
@@ -38,6 +35,7 @@ jobs:
     environment: staging
     needs: build
     steps:
+      - run: sleep 36000
       - uses: YiMysty/download2@main
         with:
           name: my-artifact
