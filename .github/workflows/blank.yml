@@ -33,3 +33,11 @@ jobs:
         with:
           name: my-artifact
       - run: printenv
+  deployment:
+    runs-on: ubuntu-latest
+    environment: staging
+    needs: build
+    steps:
+      - uses: YiMysty/download2@main
+        with:
+          name: my-artifact
