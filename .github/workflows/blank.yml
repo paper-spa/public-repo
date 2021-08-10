@@ -32,7 +32,7 @@ jobs:
       - run: printenv
   deployment:
     runs-on: ubuntu-latest
-    environment: github-pages
+    environment: github-pages-blah
     needs: build
     steps:
       - uses: YiMysty/download2@main
