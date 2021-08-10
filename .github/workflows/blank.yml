@@ -35,7 +35,6 @@ jobs:
     environment: staging
     needs: build
     steps:
-      - run: sleep 36000
       - uses: YiMysty/download2@main
         with:
           name: my-artifact
